@@ -1340,6 +1340,58 @@ ul { list-style: none; }
 @media (max-width: 768px) {
   .section-padding { padding: 64px 0; }
 
+  /* Centre all content on mobile */
+  .service-card,
+  .area-card,
+  .testimonial-card,
+  .contact-info,
+  .contact-form-area,
+  .footer-about,
+  .footer-grid > div {
+    text-align: center;
+  }
+
+  /* Footer logo/links centred */
+  .footer .logo,
+  .footer-links li,
+  .footer-links a {
+    justify-content: center;
+  }
+
+  /* Service & area card icons centred */
+  .service-card-icon,
+  .area-card-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Service list items: keep icon + text together but centre the row */
+  .service-list li {
+    justify-content: center;
+  }
+
+  /* Area location pills centred */
+  .area-locations { justify-content: center; }
+
+  /* Service price centred under text */
+  .service-price { text-align: center; }
+
+  /* About feature ticks centred as a group */
+  .about-features {
+    justify-items: center;
+  }
+
+  /* Contact info: centre the icon-and-text rows */
+  .contact-detail { justify-content: center; }
+  .contact-detail-text { text-align: left; }
+
+  /* Contact hours stay left so the time columns line up */
+  .contact-hours { text-align: left; }
+
+  /* Form labels centred above their inputs */
+  .form-group { align-items: center; }
+  .form-group label { text-align: center; width: 100%; }
+
   .nav-links { display: none; }
 
   .nav-cta .btn { display: none; }
