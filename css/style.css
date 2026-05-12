@@ -355,31 +355,25 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   z-index: -2;
-  background:
-    radial-gradient(ellipse at 70% 30%, rgba(217, 191, 148, 0.18) 0%, transparent 55%),
-    radial-gradient(ellipse at 20% 80%, rgba(107, 122, 90, 0.18) 0%, transparent 55%),
-    linear-gradient(135deg, #2c3a40 0%, #3a4a52 50%, #1f2a30 100%);
+  background: #2c3a40;
 }
 
-.hero-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='%23d9bf94' fill-opacity='0.04'%3E%3Cpath d='M90 30 Q105 30 105 45 L105 110 L75 110 L75 45 Q75 30 90 30 Z'/%3E%3Crect x='70' y='110' width='40' height='6'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 240px 240px;
-  background-position: center;
-  opacity: 0.6;
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.75) saturate(0.85);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    135deg,
-    rgba(44, 58, 64, 0.78) 0%,
-    rgba(44, 58, 64, 0.55) 60%,
-    rgba(44, 58, 64, 0.35) 100%
+    100deg,
+    rgba(31, 42, 48, 0.85) 0%,
+    rgba(44, 58, 64, 0.65) 55%,
+    rgba(44, 58, 64, 0.3) 100%
   );
   z-index: -1;
 }
@@ -520,19 +514,21 @@ ul { list-style: none; }
   position: relative;
 }
 
-.about-illustration {
+.about-photo {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   background: var(--dark);
   aspect-ratio: 400 / 520;
-  max-height: 520px;
+  max-height: 560px;
 }
 
-.about-illustration svg {
+.about-photo img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   display: block;
+  filter: saturate(0.85) brightness(0.96);
 }
 
 .experience-badge {
@@ -917,23 +913,13 @@ ul { list-style: none; }
 /* ===== CTA BANNER ===== */
 .cta-banner {
   background:
-    radial-gradient(ellipse at center, rgba(217, 191, 148, 0.12) 0%, transparent 60%),
-    linear-gradient(135deg, #2c3a40 0%, #3a4a52 50%, #1f2a30 100%);
+    linear-gradient(135deg, rgba(31, 42, 48, 0.88), rgba(44, 58, 64, 0.78)),
+    url('../images/cta-path.jpg') center/cover no-repeat;
   padding: 90px 0;
   text-align: center;
   color: #fff;
   position: relative;
   overflow: hidden;
-}
-
-.cta-banner::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='%23d9bf94' fill-opacity='0.04'%3E%3Cpath d='M90 30 Q105 30 105 45 L105 110 L75 110 L75 45 Q75 30 90 30 Z'/%3E%3Crect x='70' y='110' width='40' height='6'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 240px 240px;
-  pointer-events: none;
 }
 
 .cta-banner > .container { position: relative; z-index: 1; }
