@@ -211,13 +211,15 @@ ul { list-style: none; }
   height: 64px;
   width: auto;
   display: block;
+  mix-blend-mode: multiply;
 }
 
 .footer-logo .logo-img {
   height: 96px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 8px;
+  background: #fff;
+  padding: 10px 14px;
   border-radius: var(--radius);
+  mix-blend-mode: normal;
 }
 
 .nav-links {
