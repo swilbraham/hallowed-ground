@@ -211,7 +211,6 @@ ul { list-style: none; }
   height: 64px;
   width: auto;
   display: block;
-  mix-blend-mode: multiply;
 }
 
 .footer-logo .logo-img {
@@ -219,7 +218,6 @@ ul { list-style: none; }
   background: #fff;
   padding: 10px 14px;
   border-radius: var(--radius);
-  mix-blend-mode: normal;
 }
 
 .nav-links {
