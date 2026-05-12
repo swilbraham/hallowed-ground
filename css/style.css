@@ -710,8 +710,37 @@ ul { list-style: none; }
   margin-left: 4px;
 }
 
+/* ===== BEFORE & AFTER ===== */
+.results { background: var(--bg); }
+
+.before-after {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.before-after img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+}
+
+.before-after figcaption {
+  margin-top: 24px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.02rem;
+  color: var(--text-light);
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
 /* ===== PROCESS ===== */
-.process { background: var(--bg); }
+.process { background: var(--bg-warm); }
 
 .process-grid {
   display: grid;
