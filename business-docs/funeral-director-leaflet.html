@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hallowed Ground Memorial Care &mdash; For Funeral Directors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f1ea;
+      --bg-warm: #ede7dc;
+      --dark: #2c3a40;
+      --stone: #5a6770;
+      --text: #3a4750;
+      --text-light: #6b7680;
+      --accent: #8c6f4a;
+      --accent-light: #a48460;
+      --border: #d8d2c6;
+    }
+
+    html, body {
+      font-family: 'Inter', -apple-system, 'Helvetica Neue', sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.5;
+      color: var(--text);
+      background: #fff;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      padding: 0;
+      margin: 0 auto;
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media screen {
+      body {
+        background: #888;
+        padding: 30px 0;
+      }
+      .page { box-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--dark);
+    }
+
+    /* Header band */
+    .header {
+      background: var(--dark);
+      color: #fff;
+      padding: 18mm 18mm 14mm;
+      position: relative;
+    }
+
+    .header .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32pt;
+      font-weight: 600;
+      letter-spacing: 0.005em;
+      line-height: 1;
+      color: #fff;
+    }
+
+    .header .brand-tag {
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      color: #d9bf94;
+      margin-top: 6pt;
+    }
+
+    .header .strap {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 15pt;
+      color: rgba(255,255,255,0.85);
+      margin-top: 14pt;
+      max-width: 130mm;
+      line-height: 1.35;
+    }
+
+    .header .aud {
+      position: absolute;
+      top: 18mm;
+      right: 18mm;
+      text-align: right;
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: #d9bf94;
+      border: 1px solid rgba(217,191,148,0.4);
+      padding: 6pt 10pt;
+    }
+
+    /* Body */
+    .body {
+      padding: 14mm 18mm 0;
+    }
+
+    .intro {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12pt;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12mm;
+      max-width: 160mm;
+    }
+
+    /* Services grid */
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8mm 12mm;
+      margin-bottom: 12mm;
+    }
+
+    .service h3 {
+      font-size: 13pt;
+      margin-bottom: 2pt;
+      color: var(--dark);
+    }
+
+    .service .price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 4pt;
+    }
+
+    .service p {
+      font-size: 9.5pt;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    /* Why-us strip */
+    .why {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 2pt;
+      padding: 8mm 10mm;
+      margin-bottom: 12mm;
+    }
+
+    .why h2 {
+      font-size: 14pt;
+      margin-bottom: 6pt;
+      text-align: center;
+    }
+
+    .why-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4pt 16pt;
+      margin-top: 8pt;
+      list-style: none;
+      padding: 0;
+    }
+
+    .why-list li {
+      font-size: 10pt;
+      color: var(--text);
+      padding-left: 14pt;
+      position: relative;
+    }
+
+    .why-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6pt;
+      width: 8pt;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    /* Footer band */
+    .foot {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--dark);
+      color: #fff;
+      padding: 12mm 18mm;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8mm;
+    }
+
+    .foot .col h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: #d9bf94;
+      margin-bottom: 6pt;
+    }
+
+    .foot .col .big {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16pt;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 4pt;
+    }
+
+    .foot .col p {
+      font-size: 9.5pt;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.5;
+    }
+
+    .foot .col strong { color: #fff; }
+
+    .seal {
+      position: absolute;
+      top: -8mm;
+      right: 18mm;
+      width: 30mm;
+      height: 30mm;
+      background: var(--accent);
+      border: 4px solid var(--bg);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 9pt;
+      text-align: center;
+      line-height: 1.15;
+      padding: 6pt;
+    }
+
+    .seal .big-number {
+      font-size: 19pt;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 1pt;
+    }
+
+    .print-note {
+      display: none;
+    }
+
+    @media screen {
+      .print-note {
+        display: block;
+        max-width: 210mm;
+        margin: 0 auto 12px;
+        padding: 10pt 14pt;
+        font-size: 10pt;
+        color: #6d5538;
+        background: #fef9ec;
+        border: 1px solid #e6dab8;
+        border-radius: 3pt;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-note">
+  Print or save as PDF from your browser (File &rarr; Print &rarr; Save as PDF &rarr; A4, no margins). Designed as a single A4 page to leave at funeral director offices.
+</div>
+
+<div class="page">
+
+  <header class="header">
+    <div class="aud">For Funeral Directors</div>
+    <div class="brand-name">Hallowed Ground</div>
+    <div class="brand-tag">Memorial Care</div>
+    <p class="strap">A sensitive, family-run partner for the families you serve &mdash; long after the funeral itself.</p>
+  </header>
+
+  <main class="body">
+
+    <p class="intro">
+      Families often come back to you months or years after a funeral, asking how to look after a memorial that's weathering, becoming overgrown or losing its inscription. Hallowed Ground is the local partner you can recommend with confidence &mdash; fully insured, council-registered, and treating every memorial with the same care and discretion you do.
+    </p>
+
+    <div class="services">
+      <div class="service">
+        <h3>Headstone Cleaning</h3>
+        <div class="price">from &pound;65</div>
+        <p>Stone-safe, biocide-free options. Granite, marble, limestone, sandstone and slate &mdash; all hand-cleaned, no power tools.</p>
+      </div>
+
+      <div class="service">
+        <h3>Lichen &amp; Algae Removal</h3>
+        <div class="price">from &pound;85</div>
+        <p>Patient, multi-visit removal of biological growth using heritage-approved biocides. Inscriptions brought back to clarity.</p>
+      </div>
+
+      <div class="service">
+        <h3>Re-lettering &amp; Gilding</h3>
+        <div class="price">from &pound;120</div>
+        <p>Hand-painted lead-free enamel or traditional 23.5ct gold leaf. Matched to the original lettering.</p>
+      </div>
+
+      <div class="service">
+        <h3>Floral Tributes</h3>
+        <div class="price">from &pound;25</div>
+        <p>Anniversary and birthday placements, Christmas wreaths, regular fresh flowers. Photograph confirmation provided.</p>
+      </div>
+
+      <div class="service">
+        <h3>Stone Repair &amp; Re-fixing</h3>
+        <div class="price">on quotation</div>
+        <p>Re-setting leaning headstones, kerb realignment, chip and crack repair &mdash; via our NAMM-aligned partner.</p>
+      </div>
+
+      <div class="service">
+        <h3>Maintenance Plans</h3>
+        <div class="price">from &pound;30 / visit</div>
+        <p>Quarterly or monthly visits with a photo report after each one &mdash; perfect for families living away.</p>
+      </div>
+    </div>
+
+    <div class="why">
+      <h2>What you can tell the families you refer</h2>
+      <ul class="why-list">
+        <li>Family-run, based locally in the North West</li>
+        <li>Fully insured (&pound;5m public liability)</li>
+        <li>DBS checked &amp; council-registered</li>
+        <li>Stone-safe methods &mdash; no pressure washing</li>
+        <li>Before-and-after photographs provided</li>
+        <li>No-obligation written quote</li>
+        <li>Sensitive, discreet on-site conduct</li>
+        <li>Permit and permissions handled on the family's behalf</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer class="foot">
+    <div class="seal">
+      <div class="big-number">10+</div>
+      Years<br>of care
+    </div>
+    <div class="col">
+      <h4>Talk to us</h4>
+      <div class="big">0151 XXX XXXX</div>
+      <p>
+        <strong>simonwilbraham@sky.com</strong><br>
+        Calls returned the same working day.
+      </p>
+    </div>
+    <div class="col">
+      <h4>Where we work</h4>
+      <p>
+        Across the <strong>Wirral, Liverpool and Chester</strong> &mdash; including Landican, Anfield, Allerton, Springwood and Blacon cemeteries plus rural churchyards throughout the region.
+      </p>
+      <p style="margin-top:4pt;font-size:9pt;color:#d9bf94;">hallowedground-memorialcare.co.uk</p>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

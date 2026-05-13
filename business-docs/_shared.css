@@ -1,0 +1,198 @@
+/* Shared print stylesheet for Hallowed Ground business documents */
+
+@page {
+  size: A4;
+  margin: 16mm 18mm;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f5f1ea;
+  --dark: #2c3a40;
+  --stone: #5a6770;
+  --text: #3a4750;
+  --text-light: #6b7680;
+  --accent: #8c6f4a;
+  --border: #d8d2c6;
+  --serif: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+  --sans: 'Inter', -apple-system, 'Helvetica Neue', sans-serif;
+}
+
+html, body {
+  font-family: var(--sans);
+  font-size: 10.5pt;
+  line-height: 1.5;
+  color: var(--text);
+  background: #fff;
+}
+
+body {
+  max-width: 174mm;
+  margin: 0 auto;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+h1 { font-size: 24pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin: 18pt 0 6pt; padding-bottom: 4pt; border-bottom: 1px solid var(--border); }
+h3 { font-size: 11.5pt; margin: 12pt 0 4pt; color: var(--accent); font-weight: 600; }
+
+p { margin-bottom: 8pt; }
+
+ul, ol { margin: 4pt 0 8pt 18pt; }
+li { margin-bottom: 3pt; }
+
+strong { color: var(--dark); }
+
+/* Letterhead */
+.letterhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 12pt;
+  margin-bottom: 18pt;
+  border-bottom: 2px solid var(--dark);
+}
+
+.letterhead .brand-name {
+  font-family: var(--serif);
+  font-size: 18pt;
+  font-weight: 600;
+  color: var(--dark);
+  letter-spacing: 0.005em;
+  line-height: 1;
+}
+
+.letterhead .brand-tag {
+  font-family: var(--sans);
+  font-size: 8pt;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  margin-top: 4pt;
+}
+
+.letterhead .meta {
+  text-align: right;
+  font-size: 9pt;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.letterhead .meta strong {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+/* Document title block */
+.doc-title {
+  text-align: center;
+  margin-bottom: 16pt;
+}
+
+.doc-title h1 {
+  font-size: 20pt;
+  margin-bottom: 6pt;
+}
+
+.doc-title .subtitle {
+  font-size: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8pt 0 12pt;
+  font-size: 9.5pt;
+}
+
+th, td {
+  text-align: left;
+  padding: 6pt 8pt;
+  border: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  background: var(--bg);
+  font-weight: 600;
+  font-family: var(--sans);
+  color: var(--dark);
+  font-size: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Signature blocks */
+.signature-block {
+  margin-top: 20pt;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24pt;
+  font-size: 9pt;
+}
+
+.signature-block .field {
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 1pt;
+  min-height: 22pt;
+  margin-bottom: 4pt;
+}
+
+.signature-block label {
+  color: var(--text-light);
+  font-size: 8pt;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Footer */
+.doc-footer {
+  margin-top: 22pt;
+  padding-top: 8pt;
+  border-top: 1px solid var(--border);
+  font-size: 8.5pt;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.doc-footer strong { color: var(--dark); }
+
+/* Editable field markers — for the user's reference */
+.fillable {
+  background: #fff4dc;
+  padding: 0 3pt;
+  border-radius: 2pt;
+  color: var(--accent);
+  font-style: italic;
+}
+
+@media print {
+  .fillable {
+    background: transparent;
+    color: var(--text);
+    font-style: normal;
+  }
+  .no-print { display: none; }
+}
+
+.print-note {
+  background: #fef9ec;
+  border: 1px solid #e6dab8;
+  padding: 8pt 12pt;
+  margin-bottom: 14pt;
+  font-size: 9pt;
+  border-radius: 3pt;
+  color: #6d5538;
+}
