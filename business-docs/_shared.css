@@ -9,11 +9,11 @@
 
 :root {
   --bg: #f5f1ea;
-  --dark: #2c3a40;
-  --stone: #5a6770;
-  --text: #3a4750;
-  --text-light: #6b7680;
-  --accent: #8c6f4a;
+  --dark: #2c3a20;
+  --stone: #5a6750;
+  --text: #3a4530;
+  --text-light: #6b7560;
+  --accent: #a48240;
   --border: #d8d2c6;
   --serif: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
   --sans: 'Inter', -apple-system, 'Helvetica Neue', sans-serif;

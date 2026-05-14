@@ -6,20 +6,21 @@
 }
 
 :root {
-  /* Sombre, traditional palette — parchment + slate + antique brass */
+  /* EverRest palette — parchment + deep olive + warm gold */
   --bg: #f5f1ea;            /* parchment cream */
   --bg-card: #ffffff;
   --bg-warm: #ede7dc;
-  --bg-dark: #2c3a40;       /* deep slate */
-  --dark: #2c3a40;
-  --stone: #5a6770;         /* medium slate */
-  --stone-light: #8a9099;
-  --text: #3a4750;
-  --text-light: #6b7680;
-  --accent: #8c6f4a;        /* muted antique brass */
-  --accent-dark: #6d5538;
-  --accent-light: #a48460;
-  --moss: #6b7a5a;          /* subtle moss green */
+  --bg-dark: #2c3a20;       /* deep olive */
+  --dark: #2c3a20;          /* deep olive (from wordmark) */
+  --stone: #5a6750;         /* medium olive */
+  --stone-light: #8a9078;
+  --text: #3a4530;
+  --text-light: #6b7560;
+  --accent: #a48240;        /* warm gold (from MEMORIAL wordmark) */
+  --accent-dark: #806328;
+  --accent-light: #b89859;
+  --moss: #7d8866;          /* sage olive (wreath leaves) */
+  --gold-light: #d9bf94;    /* light gold highlight */
   --border: #d8d2c6;
   --border-light: #e6e1d6;
   --shadow-sm: 0 1px 3px rgba(44, 58, 64, 0.08);
@@ -208,15 +209,16 @@ ul { list-style: none; }
 }
 
 .logo-img {
-  height: 64px;
+  height: 84px;
   width: auto;
   display: block;
 }
 
 .footer-logo .logo-img {
-  height: 96px;
+  height: 120px;
+  width: auto;
   background: #fff;
-  padding: 10px 14px;
+  padding: 12px 18px;
   border-radius: var(--radius);
 }
 
